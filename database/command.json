@@ -1,218 +1,234 @@
 [
   {
-    "nama": "#menu",
-    "count": 279
-  },
-  {
     "nama": "#sticker",
-    "count": 291
+    "count": 529
   },
   {
     "nama": "#tes",
-    "count": 238
+    "count": 409
+  },
+  {
+    "nama": "#menu",
+    "count": 291
+  },
+  {
+    "nama": "#afk",
+    "count": 121
+  },
+  {
+    "nama": "#stickerwm",
+    "count": 79
   },
   {
     "nama": "#tiktok",
     "count": 68
   },
   {
-    "nama": "#runtime",
-    "count": 13
+    "nama": "#smeme",
+    "count": 59
   },
   {
     "nama": "#listpremium",
-    "count": 23
-  },
-  {
-    "nama": "#autoaijapri",
-    "count": 11
-  },
-  {
-    "nama": "#addprem",
-    "count": 13
-  },
-  {
-    "nama": "#toimage",
-    "count": 13
-  },
-  {
-    "nama": "#attp",
-    "count": 14
-  },
-  {
-    "nama": "#infobot",
-    "count": 5
-  },
-  {
-    "nama": "#dashboard",
-    "count": 3
-  },
-  {
-    "nama": "#say",
-    "count": 5
-  },
-  {
-    "nama": "#speed",
-    "count": 3
-  },
-  {
-    "nama": "#delprem",
-    "count": 6
-  },
-  {
-    "nama": "#nowa",
-    "count": 4
-  },
-  {
-    "nama": "#foliokiri",
-    "count": 2
-  },
-  {
-    "nama": "#cogan",
-    "count": 3
-  },
-  {
-    "nama": "#stickerwm",
-    "count": 77
-  },
-  {
-    "nama": "#cekpremium",
-    "count": 3
-  },
-  {
-    "nama": "#cecan",
-    "count": 8
-  },
-  {
-    "nama": "#nulis",
-    "count": 2
-  },
-  {
-    "nama": "#nuliskiri",
-    "count": 1
-  },
-  {
-    "nama": "#tovideo",
-    "count": 1
-  },
-  {
-    "nama": "#resetlimit",
-    "count": 3
-  },
-  {
-    "nama": "#antilink",
-    "count": 7
-  },
-  {
-    "nama": "#antiwame",
-    "count": 3
-  },
-  {
-    "nama": "#welcome",
-    "count": 7
-  },
-  {
-    "nama": "#lirik",
-    "count": 20
-  },
-  {
-    "nama": "#smeme",
-    "count": 35
-  },
-  {
-    "nama": "#tovid",
-    "count": 1
+    "count": 27
   },
   {
     "nama": "#qc",
     "count": 26
   },
   {
-    "nama": "#group",
-    "count": 9
-  },
-  {
-    "nama": "#close",
-    "count": 1
-  },
-  {
-    "nama": "#tomp3",
-    "count": 3
-  },
-  {
-    "nama": "#waifu",
-    "count": 6
-  },
-  {
-    "nama": "#antilink2",
-    "count": 2
-  },
-  {
-    "nama": "#antiwame2",
-    "count": 1
-  },
-  {
-    "nama": "#afk",
-    "count": 115
+    "nama": "#lirik",
+    "count": 22
   },
   {
     "nama": "#grupwa",
+    "count": 19
+  },
+  {
+    "nama": "#waifu",
+    "count": 27
+  },
+  {
+    "nama": "#addprem",
+    "count": 16
+  },
+  {
+    "nama": "#toimage",
+    "count": 15
+  },
+  {
+    "nama": "#group",
+    "count": 15
+  },
+  {
+    "nama": "#attp",
+    "count": 14
+  },
+  {
+    "nama": "#runtime",
     "count": 13
   },
   {
-    "nama": "#wanted",
-    "count": 3
-  },
-  {
-    "nama": "#simih",
-    "count": 1
-  },
-  {
-    "nama": "#antionce",
-    "count": 2
+    "nama": "#allmenu",
+    "count": 12
   },
   {
     "nama": "#emojimix",
+    "count": 15
+  },
+  {
+    "nama": "#buylimit",
     "count": 11
   },
   {
-    "nama": "#listbahasa",
-    "count": 1
+    "nama": "#autoaijapri",
+    "count": 15
   },
   {
-    "nama": "#antidelete",
-    "count": 5
-  },
-  {
-    "nama": "#antibugsetting",
-    "count": 4
+    "nama": "#mute",
+    "count": 16
   },
   {
     "nama": "#kickme",
     "count": 8
   },
   {
+    "nama": "#welcome",
+    "count": 9
+  },
+  {
+    "nama": "#antilink",
+    "count": 8
+  },
+  {
+    "nama": "#cecan",
+    "count": 8
+  },
+  {
+    "nama": "#transfer",
+    "count": 7
+  },
+  {
+    "nama": "#delprem",
+    "count": 7
+  },
+  {
+    "nama": "#tai",
+    "count": 6
+  },
+  {
+    "nama": "#tomp3",
+    "count": 6
+  },
+  {
+    "nama": "#close",
+    "count": 6
+  },
+  {
+    "nama": "#infobot",
+    "count": 8
+  },
+  {
+    "nama": "#antidelete",
+    "count": 5
+  },
+  {
+    "nama": "#say",
+    "count": 5
+  },
+  {
     "nama": "#left",
+    "count": 4
+  },
+  {
+    "nama": "#antibugsetting",
+    "count": 4
+  },
+  {
+    "nama": "#resetlimit",
+    "count": 4
+  },
+  {
+    "nama": "#nowa",
+    "count": 4
+  },
+  {
+    "nama": "#dashboard",
+    "count": 4
+  },
+  {
+    "nama": "#wanted",
+    "count": 3
+  },
+  {
+    "nama": "#antiwame",
+    "count": 3
+  },
+  {
+    "nama": "#cekpremium",
+    "count": 3
+  },
+  {
+    "nama": "#cogan",
+    "count": 3
+  },
+  {
+    "nama": "#speed",
+    "count": 3
+  },
+  {
+    "nama": "#buygamelimit",
     "count": 2
   },
   {
-    "nama": "#revoke",
-    "count": 1
+    "nama": "#donate",
+    "count": 2
+  },
+  {
+    "nama": "#cekdrive",
+    "count": 3
   },
   {
     "nama": "#autoaigrup",
     "count": 2
   },
   {
-    "nama": "#fitnah",
+    "nama": "#antionce",
+    "count": 2
+  },
+  {
+    "nama": "#antilink2",
+    "count": 2
+  },
+  {
+    "nama": "#nulis",
+    "count": 2
+  },
+  {
+    "nama": "#foliokiri",
+    "count": 2
+  },
+  {
+    "nama": "#casino",
     "count": 1
   },
   {
-    "nama": "#setwelcome",
+    "nama": "#cekbandwidth",
     "count": 1
   },
   {
-    "nama": "#delsetwelcome",
+    "nama": "#randomsticker",
+    "count": 1
+  },
+  {
+    "nama": "#groupmenu",
+    "count": 1
+  },
+  {
+    "nama": "#ownermenu",
+    "count": 1
+  },
+  {
+    "nama": "#autodlgc",
     "count": 1
   },
   {
@@ -220,15 +236,51 @@
     "count": 1
   },
   {
-    "nama": "#cekdrive",
+    "nama": "#delsetwelcome",
     "count": 1
   },
   {
-    "nama": "#donate",
-    "count": 2
+    "nama": "#setwelcome",
+    "count": 1
   },
   {
-    "nama": "#tai",
-    "count": 6
+    "nama": "#fitnah",
+    "count": 1
+  },
+  {
+    "nama": "#revoke",
+    "count": 1
+  },
+  {
+    "nama": "#listbahasa",
+    "count": 1
+  },
+  {
+    "nama": "#simih",
+    "count": 1
+  },
+  {
+    "nama": "#antiwame2",
+    "count": 1
+  },
+  {
+    "nama": "#tovid",
+    "count": 1
+  },
+  {
+    "nama": "#tovideo",
+    "count": 1
+  },
+  {
+    "nama": "#nuliskiri",
+    "count": 1
+  },
+  {
+    "nama": "#autodl",
+    "count": 7
+  },
+  {
+    "nama": "#antitoxic",
+    "count": 1
   }
 ]
