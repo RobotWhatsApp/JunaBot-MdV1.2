@@ -1043,9 +1043,9 @@ var jamna = new Date().toLocaleTimeString('en-US', { timeZone: "Asia/Jakarta" })
 var hasilnes = jamna.split(':')[0] < 10 ? '0' + jamna : jamna
 if(hasilnes === '14:00:00 PM') {
 media = fs.readFileSync('./database/balance.json')
-juna.sendMessage(m.chat, { document: media, fileName: 'balance.json', mimetype: 'application/json' }, { quoted: fkontak })
+juna.sendMessage('6285643115199@s.whatsapp.net', { document: media, fileName: 'balance.json', mimetype: 'application/json' }, { quoted: fkontak })
 media1 = fs.readFileSync('./database/user.json')
-juna.sendMessage(m.chat, { document: media1, fileName: 'user.json', mimetype: 'application/json' }, { quoted: fkontak })
+juna.sendMessage('6285643115199@s.whatsapp.net', { document: media1, fileName: 'user.json', mimetype: 'application/json' }, { quoted: fkontak })
 console.log("Backup Data!")
 }
 }, 1000);
