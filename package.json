@@ -2,12 +2,12 @@
   "name": "Vreden Official",
   "version": "5.0.0",
   "description": "whatsapp tob with multi device.",
-  "main": "index.js",
+  "main": "juna.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node juna.js"
   },
   "keywords": [
     "termux",
