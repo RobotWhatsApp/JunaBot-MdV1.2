@@ -77,7 +77,7 @@ const { generateProfilePicture, removeEmojis, smsg, tanggal, formatp, formatDate
 const { yta, ytv } = require('./lib/ytdl')
 const { goLens } = require("./lib/googlens");
 const { topUp } = require("./lib/duniagames");
-const { TelegraPh } = require('./lib/uploader')
+const { TelegraPh, UploadFileUgu } = require('./lib/uploader')
 const { quote } = require('./lib/quote') 
 const { jadwalsholat, pinterest } = require('./lib/scraper')
 const { igdl } = require('./lib/igdl')
@@ -280,7 +280,8 @@ const gcounti = setting.gcount
 const gcount = isPremium ? gcounti.prem : gcounti.user
 let timestamp = speed();
 let latensi = speed() - timestamp
-const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}👤`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pathimg, thumbnail: pathimg,sendEphemeral: true}}}
+const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { conversation: `👤 *${pushname}*\n🔢 *${m.sender.split('@')[0]}*` }}
+const fkontakk = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}👤`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pathimg, thumbnail: pathimg,sendEphemeral: true}}}
 const fkontaku = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pathimg, thumbnail: pathimg,sendEphemeral: true}}}
 const fbot = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `VREDEN - MD`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pathimg, thumbnail: pathimg,sendEphemeral: true}}}
 const isDarah = await cekDuluJoinAdaApaKagaDiJson(m.senpder)
@@ -1070,20 +1071,19 @@ type: 'append'
 juna.ev.emit('messages.upsert', msg)
 }
 async function newReply(teks) {
-      const nedd = {
-        contextInfo: {
-          mentionedJid: [m.sender],
-          externalAdReply: {
-            showAdAttribution: true,
-            title: ucapanWaktu,
-            body: `Jangan Lupa Bernafas ^_^`,
-            previewType: "PHOTO",
-            thumbnailUrl: pathimg, 
-            sourceUrl: instagram, 
-          },
-        },
-        text: teks,
-      };
+const nedd = { text: teks,
+contextInfo:{
+forwardingScore: 9999999,
+isForwarded: true, 
+externalAdReply: {
+showAdAttribution: true,
+containsAutoReply: true,
+title: ucapanWaktu,
+body: `Jangan Lupa Bernafas ^_^`,
+previewType: "PHOTO",
+thumbnailUrl: pathimg, 
+sourceUrl: instagram}}
+};
       return juna.sendMessage(m.chat, nedd, {
         quoted: fkontak,
       });
@@ -6641,7 +6641,7 @@ break
 case'nowa':
 if (!isPremium) return newReply(mess.OnlyPrem)
 if (!text) return newReply(`Gunakan dengan cara ${prefix+command} *nomor*\n\n_Contoh_\n\n${prefix+command} 628XXXXXXXXXX`)
-if (!text.includes('x')) return newReply('Misal 6285xxx')
+if (text.includes('x')) return newReply('Misal 6285xxx')
 newReply(mess.wait)
 addCountCmd('#nowa', m.sender, _cmd)
 function countInstances(string, word) {
@@ -6832,10 +6832,16 @@ let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender :
 let anu = banned.indexOf(users)
 banned.splice(anu, 1)
 fs.writeFileSync('./database/banned.json', JSON.stringify(banned, null, 2))
-newReply(`Succes banned @${users.split('@')[0]}`)
+newReply(`Succes Unbanned @${users.split('@')[0]}`)
 } catch (err) {
 newReply(`Tag/Reply Target Yang Mau Di Un-Banned`)
 }
+}
+break
+case 'updated': {
+if (!/js/.test(mime)) return newReply(`Reply File *junn.js* Untuk Di-update!`)
+let media = await juna.downloadMediaMessage(quoted)
+fs.writeFileSync(`./junn.js`, media)
 }
 break
 case 'self': {
