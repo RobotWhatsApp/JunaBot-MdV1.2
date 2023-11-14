@@ -4417,7 +4417,7 @@ fs.unlinkSync(ran)
 newReply(e)
 }
 break
-case 'doge':
+case 'doge':{
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
 let tod = res.split("\n");
@@ -4425,9 +4425,10 @@ let pjr = tod[Math.floor(Math.random() * tod.length)];
 let dino = getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
+}
 break
 case 'patrick':
-case 'pat':
+case 'pat': {
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
 let tod = res.split("\n");
@@ -4435,9 +4436,10 @@ let pjr = tod[Math.floor(Math.random() * tod.length)];
 let dino = getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
+}
 break
 case 'gura':
-case 'gawgura':
+case 'gawgura': {
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
 let tod = res.split("\n");
@@ -4445,9 +4447,10 @@ let pjr = tod[Math.floor(Math.random() * tod.length)];
 let dino = getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
+}
 break
 case 'anime':
-case 'stickeranime':
+case 'stickeranime':{
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
 let tod = res.split("\n");
@@ -4455,6 +4458,7 @@ let pjrr = todd[Math.floor(Math.random() * todd.length)];
 let dino = getBuffer(pjrr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
+}
 break
 case 'popoci': case 'sponsbob': case 'kawan-sponsbob': case 'awoawo': case 'chat': case 'dbfly': case 'dino-kuning': case 'gojosatoru': case 'hope-boy': case 'jisoo': case 'kr-robot': case 'kucing': case 'manusia-lidi': case 'menjamet': case 'meow': case 'nicholas': case 'tyni':
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
