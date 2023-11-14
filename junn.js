@@ -280,7 +280,7 @@ const gcounti = setting.gcount
 const gcount = isPremium ? gcounti.prem : gcounti.user
 let timestamp = speed();
 let latensi = speed() - timestamp
-const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { conversation: `👤 *${pushname}*\n🔢 *${m.sender.split('@')[0]}*` }}
+const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { conversation: `👤 *${pushname}*\n🔢 *+${m.sender.split('@')[0]}*` }}
 const fkontakk = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}👤`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pathimg, thumbnail: pathimg,sendEphemeral: true}}}
 const fkontaku = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `${pushname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pathimg, thumbnail: pathimg,sendEphemeral: true}}}
 const fbot = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': `VREDEN - MD`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${pushname},;;;\nFN:${pushname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pathimg, thumbnail: pathimg,sendEphemeral: true}}}
@@ -1425,11 +1425,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebakgame[m.chat][2], balance) 
 await newReply(JwbTrue("Tebak Bendera", tebakgame[m.chat][2]) + `\n\nKirim perintah .tebakgame untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {
-delete: {
-id: tebakgame[m.chat][0].id
-}
-})
 clearTimeout(tebakgame[m.chat][3])
 delete tebakgame[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1442,11 +1437,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebakgambar[m.chat][2], balance)
 await newReply(JwbTrue("Tebak Gambar", tebakgambar[m.chat][2]) + `\n\nKirim perintah .tebakgambar untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {
-delete: {
-id: tebakgambar[m.chat][0].id
-}
-})
 clearTimeout(tebakgambar[m.chat][3])
 delete tebakgambar[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1459,7 +1449,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebakkata[m.chat][2], balance)
 await newReply(JwbTrue("Tebak Kata", tebakkata[m.chat][2]) + `\n\nKirim perintah .tebakkata untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkata[m.chat][0] })
 clearTimeout(tebakkata[m.chat][3])
 delete tebakkata[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1472,11 +1461,6 @@ jawaban = json.name.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebakbendera[m.chat][2], balance) 
 await newReply(JwbTrue("Tebak Bendera", tebakbendera[m.chat][2]) + `\n\nKirim perintah .tebakbendera untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {
-delete: {
-id: tebakbendera[m.chat][0].id
-}
-})
 clearTimeout(tebakbendera[m.chat][3])
 delete tebakbendera[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1489,7 +1473,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, caklontong[m.chat][2], balance)
 await newReply(JwbTrue("Cak Lontong", caklontong[m.chat][2]) + `\n\nKirim perintah .caklontong untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: caklontong[m.chat][0] })
 clearTimeout(caklontong[m.chat][3])
 delete caklontong[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1502,7 +1485,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, susunkata[m.chat][2], balance) 
 await newReply(JwbTrue("Susun Kata", susunkata[m.chat][2]) + `\n\nKirim perintah .susunkata untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: susunkata[m.chat][0] })
 clearTimeout(susunkata[m.chat][3])
 delete susunkata[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1515,7 +1497,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebakkalimat[m.chat][2], balance) 
 await newReply (JwbTrue("Tebak Kalimat", tebakkalimat[m.chat][2]) + `\n\nKirim perintah .tebakkalimat untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkalimat[m.chat][0] })
 clearTimeout(tebakkalimat[m.chat][3])
 delete tebakkalimat[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1528,7 +1509,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, siapaaku[m.chat][2], balance)
 await newReply (JwbTrue("Tebak Siapa", siapaaku[m.chat][2]) + `\n\nKirim perintah .tebaksiapa untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: siapaaku[m.chat][0] })
 clearTimeout(siapaaku[m.chat][3])
 delete siapaaku[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1541,7 +1521,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tekateki[m.chat][2], balance) 
 await newReply (JwbTrue("Teka Teki", tekateki[m.chat][2]) + `\n\nKirim perintah .tekateki untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tekateki[m.chat][0] })
 clearTimeout(tekateki[m.chat][3])
 delete tekateki[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1554,7 +1533,6 @@ jawaban = json.unsur.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebakkimia[m.chat][2], balance)
 await newReply (JwbTrue("Teka Kimia", tebakkimia[m.chat][2]) + `\n\nKirim perintah .tebakkimia untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkimia[m.chat][0] })
 clearTimeout(tebakkimia[m.chat][3])
 delete tebakkimia[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1567,7 +1545,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebaklirik[m.chat][2], balance) 
 await newReply (JwbTrue("Teka Lirik", tebaklirik[m.chat][2]) + `\n\nKirim perintah .tebaklirik untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebaklirik[m.chat][0] })
 clearTimeout(tebaklirik[m.chat][3])
 delete tebaklirik[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1580,7 +1557,6 @@ jawaban = json.jawaban.toLowerCase().trim()
 if (m.text.toLowerCase() == jawaban) {
 await addBalance(m.sender, tebaktebakan[m.chat][2], balance) 
 await newReply (JwbTrue("Teka Tebakan", tebaktebakan[m.chat][2]) + `\n\nKirim perintah .tebaktebakan untuk bermain lagi 🎮`, footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebaktebakan[m.chat][0] })
 clearTimeout(tebaktebakan[m.chat][3])
 delete tebaktebakan[m.chat]
 } else if (similarity(m.text.toLowerCase(), jawaban) >= threshold)
@@ -1684,11 +1660,6 @@ await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Silahkan 
 setTimeout(() => {
 if (tebakgambar[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {
-delete: {
-id: tebakgambar[m.chat][0].id
-}
-})
 delete tebakgambar[m.chat]
 }
 }, 120000)
@@ -1779,11 +1750,6 @@ await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Gambar di
 setTimeout(() => {
 if (tebakgame[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {
-delete: {
-id: tebakgame[m.chat][0].id
-}
-})
 delete tebakgame[m.chat]
 }
 }, 120000)
@@ -1874,7 +1840,6 @@ await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}
 setTimeout(() => {
 if (tebakkata[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkata[m.chat][0] })
 delete tebakkata[m.chat]
 }
 }, 120000)
@@ -1983,11 +1948,6 @@ await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Gambar di
 setTimeout(() => {
 if (tebakbendera[m.chat]) {
 newReply (waktuHabis(result.name), footxt, m)
-juna.sendMessage(m.chat, {
-delete: {
-id: tebakbendera[m.chat][0].id
-}
-})
 delete tebakbendera[m.chat]
 }
 }, 120000)
@@ -2078,7 +2038,6 @@ await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}
 setTimeout(() => {
 if (tebakkalimat[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkalimat[m.chat][0] })
 delete tebakkalimat[m.chat]
 }
 }, 120000)
@@ -2169,7 +2128,6 @@ await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}
 setTimeout(() => {
 if (siapaaku[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: siapaaku[m.chat][0] })
 delete siapaaku[m.chat]
 }
 }, 120000)
@@ -2260,7 +2218,6 @@ await juna.sendText(m.chat, `Apa Arti Dari Simbol : *${result.lambang}*?\nWaktu 
 setTimeout(() => {
 if (tebakkimia[m.chat]) {
 newReply (waktuHabis(result.unsur), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkimia[m.chat][0] })
 delete tebakkimia[m.chat]
 }
 }, 120000)
@@ -2351,7 +2308,6 @@ await juna.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWa
 setTimeout(() => {
 if (tebaklirik[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebaklirik[m.chat][0] })
 delete tebaklirik[m.chat]
 }
 }, 120000)
@@ -2442,7 +2398,6 @@ await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}
 setTimeout(() => {
 if (tebaktebakan[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebaktebakan[m.chat][0] })
 delete tebaktebakan[m.chat]
 }
 }, 120000)
@@ -2533,7 +2488,6 @@ await juna.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\nSoal : ${result.so
 setTimeout(() => {
 if (susunkata[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: susunkata[m.chat][0] })
 delete susunkata[m.chat]
 }
 }, 120000)
@@ -2624,7 +2578,6 @@ await juna.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\nSoal : ${result.so
 setTimeout(() => {
 if (caklontong[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: caklontong[m.chat][0] })
 delete caklontong[m.chat]
 }
 }, 120000)
@@ -2715,7 +2668,6 @@ await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}
 setTimeout(() => {
 if (tekateki[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tekateki[m.chat][0] })
 delete tekateki[m.chat]
 }
 }, 120000)
