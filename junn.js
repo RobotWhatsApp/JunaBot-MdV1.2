@@ -4417,63 +4417,26 @@ fs.unlinkSync(ran)
 newReply(e)
 }
 break
-case 'doge':{
-if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
-let tod = res.split("\n");
-let pjr = tod[Math.floor(Math.random() * tod.length)];
-let dino = getBuffer(pjr)
-juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
-limitAdd(m.sender, limit)
-}
-break
-case 'patrick':
-case 'pat': {
-if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
-let tod = res.split("\n");
-let pjr = tod[Math.floor(Math.random() * tod.length)];
-let dino = getBuffer(pjr)
-juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
-limitAdd(m.sender, limit)
-}
-break
-case 'gura':
-case 'gawgura': {
-if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
-let tod = res.split("\n");
-let pjr = tod[Math.floor(Math.random() * tod.length)];
-let dino = getBuffer(pjr)
-juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
-limitAdd(m.sender, limit)
-}
-break
-case 'anime':
-case 'stickeranime':{
-if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-let res = fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
-let tod = res.split("\n");
-let pjrr = todd[Math.floor(Math.random() * todd.length)];
-let dino = getBuffer(pjrr)
-juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
-limitAdd(m.sender, limit)
-}
-break
-case 'popoci': case 'sponsbob': case 'kawan-sponsbob': case 'awoawo': case 'chat': case 'dbfly': case 'dino-kuning': case 'gojosatoru': case 'hope-boy': case 'jisoo': case 'kr-robot': case 'kucing': case 'manusia-lidi': case 'menjamet': case 'meow': case 'nicholas': case 'tyni':
+case 'patrick': case 'doge': case 'gura': case 'popoci': case 'sponsbob': case 'kawan-sponsbob': case 'awoawo': case 'chat': case 'dbfly': case 'dino-kuning': case 'gojosatoru': case 'hope-boy': case 'jisoo': case 'kr-robot': case 'kucing': case 'manusia-lidi': case 'menjamet': case 'meow': case 'nicholas': case 'tyni':
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 let dinoo = `https://api.zeeoneofc.my.id/api/telegram-sticker/${command}?apikey=${setting.BotKey}`
 let dino = await getBuffer(dinoo)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 break
-case 'qc':
+case 'qc':{
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 if (!text) return newReply ('Masukkan Teks') 
-let qcc = `https://skizo.tech/api/qc?text=${text}&username=${pushname}&avatar=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsA4yNn3pILbEZv5_QAf0hV-hA_E38lNNa0w&usqp=CAU&apikey=${setting.XznKey}`
+try {
+pp_user = await juna.profilePictureUrl(num, 'image')
+} catch {
+pp_user = 'https://telegra.ph/file/c3f3d2c2548cbefef1604.jpg'
+}
+let qcc = `https://skizo.tech/api/qc?text=${text}&username=${pushname}&avatar=${pp_user}&apikey=${setting.XznKey}`
 var qc = await getBuffer(qcc)
 juna.imgToSticker(m.chat, qc, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
+}
 break
 case 'lonte': 
 if (!isCreator&&!isPremium) return newReply(mess.OnlyPrem)
