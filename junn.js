@@ -4470,7 +4470,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
 .then(body => {
 let tod = body.split("\n");
 let pjr = tod[Math.floor(Math.random() * tod.length)];
-let dino = await getBuffer(pjr)
+let dino = getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
@@ -4484,7 +4484,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
 .then(body => {
 let tod = body.split("\n");
 let pjr = tod[Math.floor(Math.random() * tod.length)];
-let dino = await getBuffer(pjr)
+let dino = getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
@@ -4498,7 +4498,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
 .then(body => {
 let tod = body.split("\n");
 let pjr = tod[Math.floor(Math.random() * tod.length)];
-let dino = await getBuffer(pjr)
+let dino = getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
@@ -4512,7 +4512,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestic
 .then(body => {
 let todd = body.split("\n");
 let pjrr = todd[Math.floor(Math.random() * todd.length)];
-let dino = await getBuffer(pjrr)
+let dino = getBuffer(pjrr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
