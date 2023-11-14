@@ -4470,7 +4470,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
 .then(body => {
 let tod = body.split("\n");
 let pjr = tod[Math.floor(Math.random() * tod.length)];
-var dino = await getBuffer(pjr)
+let dino = await getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
@@ -4484,7 +4484,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
 .then(body => {
 let tod = body.split("\n");
 let pjr = tod[Math.floor(Math.random() * tod.length)];
-var dino = await getBuffer(pjr)
+let dino = await getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
@@ -4498,7 +4498,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
 .then(body => {
 let tod = body.split("\n");
 let pjr = tod[Math.floor(Math.random() * tod.length)];
-var dino = await getBuffer(pjr)
+let dino = await getBuffer(pjr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
@@ -4512,7 +4512,7 @@ fetchJson('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestic
 .then(body => {
 let todd = body.split("\n");
 let pjrr = todd[Math.floor(Math.random() * todd.length)];
-var dino = await getBuffer(pjrr)
+let dino = await getBuffer(pjrr)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 }
@@ -4521,7 +4521,7 @@ break
 case 'popoci': case 'sponsbob': case 'kawan-sponsbob': case 'awoawo': case 'chat': case 'dbfly': case 'dino-kuning': case 'gojosatoru': case 'hope-boy': case 'jisoo': case 'kr-robot': case 'kucing': case 'manusia-lidi': case 'menjamet': case 'meow': case 'nicholas': case 'tyni':
 if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 let dinoo = `https://api.zeeoneofc.my.id/api/telegram-sticker/${command}?apikey=${setting.BotKey}`
-var dino = await getBuffer(dinoo)
+let dino = await getBuffer(dinoo)
 juna.imgToSticker(m.chat, dino, m, {packname: `Sticker Maker\nNomor Bot :` , author: `VREDEN - MD\n+62 856-4311-5199` })
 limitAdd(m.sender, limit)
 break
