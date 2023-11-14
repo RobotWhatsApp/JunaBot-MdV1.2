@@ -1680,13 +1680,13 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 tebakgambar[m.chat] = [
-let tebakgamb = await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${result.deskripsi}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytega` }, { quoted: m }), result, 250
+await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${result.deskripsi}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytega` }, { quoted: m }), result, 250,
 setTimeout(() => {
 if (tebakgambar[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
 juna.sendMessage(m.chat, {
 delete: {
-id: tebakgamb.id
+id: tebakgambar[m.chat][0].id
 }
 })
 delete tebakgambar[m.chat]
@@ -1775,13 +1775,13 @@ let anu = await fetchJson('https://raw.githubusercontent.com/qisyana/scrape/main
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 tebakgame[m.chat] = [
-let gamet = await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Gambar diatas adalah game?\n\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytegem` }, { quoted: m }), result, 250
+await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Gambar diatas adalah game?\n\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytegem` }, { quoted: m }), result, 250,
 setTimeout(() => {
 if (tebakgame[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
 juna.sendMessage(m.chat, {
 delete: {
-id: gamet.id
+id: tebakgame[m.chat][0].id
 }
 })
 delete tebakgame[m.chat]
@@ -1870,11 +1870,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 tebakkata[m.chat] = [
-let { gamat } = await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteka`, m), result, 250
+await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteka`, m), result, 250,
 setTimeout(() => {
 if (tebakkata[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: gamat })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkata[m.chat][0] })
 delete tebakkata[m.chat]
 }
 }, 120000)
@@ -1979,13 +1979,13 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.name)
 tebakbendera[m.chat] = [
-let jamalo = await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Gambar diatas adalah bendera negara?\n\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytebe` }, { quoted: m }), result, 250
+await juna.sendMessage(m.chat, { image: { url: result.img }, caption: `Gambar diatas adalah bendera negara?\n\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytebe` }, { quoted: m }), result, 250,
 setTimeout(() => {
 if (tebakbendera[m.chat]) {
 newReply (waktuHabis(result.name), footxt, m)
 juna.sendMessage(m.chat, {
 delete: {
-id: jamalo.id
+id: tebakbendera[m.chat][0].id
 }
 })
 delete tebakbendera[m.chat]
@@ -2074,11 +2074,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 tebakkalimat[m.chat] = [
-let { budianj } = await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytekatu`, m), result, 250
+await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytekatu`, m), result, 250,
 setTimeout(() => {
 if (tebakkalimat[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: budianj })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkalimat[m.chat][0] })
 delete tebakkalimat[m.chat]
 }
 }, 120000)
@@ -2165,11 +2165,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 siapaaku[m.chat] = [
-let { kudanil } = await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytesi`, m), result, 250
+await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytesi`, m), result, 250,
 setTimeout(() => {
 if (siapaaku[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: kudanil })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: siapaaku[m.chat][0] })
 delete siapaaku[m.chat]
 }
 }, 120000)
@@ -2256,11 +2256,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.unsur)
 tebakkimia[m.chat] = [
-let { budibabi } = await juna.sendText(m.chat, `Apa Arti Dari Simbol : *${result.lambang}*?\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteki`, m), result, 250
+await juna.sendText(m.chat, `Apa Arti Dari Simbol : *${result.lambang}*?\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteki`, m), result, 250,
 setTimeout(() => {
 if (tebakkimia[m.chat]) {
 newReply (waktuHabis(result.unsur), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: budibabi })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebakkimia[m.chat][0] })
 delete tebakkimia[m.chat]
 }
 }, 120000)
@@ -2347,11 +2347,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 tebaklirik[m.chat] = [
-let { sasimodanil } = await juna.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteli`, m), result, 250
+await juna.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteli`, m), result, 250,
 setTimeout(() => {
 if (tebaklirik[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: sasimodanil })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebaklirik[m.chat][0] })
 delete tebaklirik[m.chat]
 }
 }, 120000)
@@ -2438,11 +2438,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 tebaktebakan[m.chat] = [
-let { koruptor } = await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteteb`, m), result, 250
+await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .yteteb`, m), result, 250,
 setTimeout(() => {
 if (tebaktebakan[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: koruptor })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tebaktebakan[m.chat][0] })
 delete tebaktebakan[m.chat]
 }
 }, 120000)
@@ -2529,11 +2529,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 susunkata[m.chat] = [
-let { anjingbudi } = await juna.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\nSoal : ${result.soal}\nTipe : ${result.tipe}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytesuka`, m), result, 250
+await juna.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\nSoal : ${result.soal}\nTipe : ${result.tipe}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytesuka`, m), result, 250,
 setTimeout(() => {
 if (susunkata[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: anjingbudi })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: susunkata[m.chat][0] })
 delete susunkata[m.chat]
 }
 }, 120000)
@@ -2620,11 +2620,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 caklontong[m.chat] = [
-let { pipimimi } = await juna.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\nSoal : ${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytelo`, m), result, 250
+await juna.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\nSoal : ${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\nJika Anda Merasa Ga Mampu Silahkan Ketik .ytelo`, m), result, 250,
 setTimeout(() => {
 if (caklontong[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: pipimimi })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: caklontong[m.chat][0] })
 delete caklontong[m.chat]
 }
 }, 120000)
@@ -2711,11 +2711,11 @@ let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database
 let result = anu[Math.floor(Math.random() * anu.length)]
 console.log("Jawaban: " + result.jawaban)
 tekateki[m.chat] = [
-let { budiasu } = await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\n_Ketik .ttete Untuk Menyerang..._`, m), result, 250
+await juna.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : ${(120000 / 1000).toFixed(2)} detik\n\n_Ketik .ttete Untuk Menyerang..._`, m), result, 250,
 setTimeout(() => {
 if (tekateki[m.chat]) {
 newReply (waktuHabis(result.jawaban), footxt, m)
-juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: budiasu })
+juna.sendMessage(m.chat, {text: '_Soal ini kadaluarsa_', edit: tekateki[m.chat][0] })
 delete tekateki[m.chat]
 }
 }, 120000)
