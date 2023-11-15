@@ -854,8 +854,8 @@ if (isAutodlgc && !isCmd) {
 if (budy.match(`youtu`)) {
 newReply(`*「 YT LINK DETECTED 」*\n\n_Tunggu Sebentar, File Anda Sedang Didownload Secara Otomatis_`)
 try{
-let ytmp3 = await fetchJson(`https://aemt.me/download/ytdl?url=${budy}`)
-let ukurane = `${ytmp3.result.size_mp3}`
+let musuk = await fetchJson(`https://aemt.me/download/ytdl?url=${budy}`)
+let ukurane = `${musuk.result.size_mp3}`
 let ukur = `${ukurane.split(' ')[0]}`
 if (ukur >= 15 && !isPremium) {
 return newReply(`File Audio [ ${ukurane} ], Anda Hanya Dapat Mendownload File Berukuran *15 MB* Dan Untuk Pengguna *Premium* Maksimal *60 MB*`) 
@@ -863,16 +863,17 @@ return newReply(`File Audio [ ${ukurane} ], Anda Hanya Dapat Mendownload File Be
 if (ukur >= 60 && isPremium) {
 return newReply(`File Audio [ ${ukurane} ], Telah Melebihi *Batas Maksimum!*`) 
 }
+let aud = musuk.result.mp3
 juna.sendMessage(m.chat, {
 audio: {
-url: ytmp3.result.mp3
+url: aud
 },
 mimetype: 'audio/mpeg',
 contextInfo: {
 externalAdReply: {
-title: ytmp3.result.title,
+title: musuk.result.title,
 body: "",
-thumbnailUrl: ytmp3.result.thumb,
+thumbnailUrl: musuk.result.thumb,
 sourceUrl: text,
 mediaType: 1,
 showAdAttribution: true,
@@ -1040,18 +1041,6 @@ if (jam4 === '14:40' && !m.key.fromMe && isCmd) return newReply(`Hai kak @${m.se
 if (jam4 === '17:36' && !m.key.fromMe && isCmd) return newReply(`Hai kak @${m.sender.split('@')[0]},\nWaktu *Maghrib* telah tiba, ambilah air wudhu dan segeralah shalat🙂.\n\n*17:36 WIB*\n_untuk wilayah Semarang dan sekitarnya._`)
 if (jam4 === '18:47' && !m.key.fromMe && isCmd) return newReply(`Hai kak @${m.sender.split('@')[0]},\nWaktu *Isya* telah tiba, ambilah air wudhu dan segeralah shalat🙂.\n\n*18:47 WIB*\n_untuk wilayah Semarang dan sekitarnya._`)
 
-//Backup Data Base
-setInterval(function() { 
-var jamna = new Date().toLocaleTimeString('en-US', { timeZone: "Asia/Jakarta" });
-var hasilnes = jamna.split(':')[0] < 10 ? '0' + jamna : jamna
-if(hasilnes === '14:00:00 PM') {
-media = fs.readFileSync('./database/balance.json')
-juna.sendMessage('6285643115199@s.whatsapp.net', { document: media, fileName: 'balance.json', mimetype: 'application/json' }, { quoted: fkontak })
-media1 = fs.readFileSync('./database/user.json')
-juna.sendMessage('6285643115199@s.whatsapp.net', { document: media1, fileName: 'user.json', mimetype: 'application/json' }, { quoted: fkontak })
-console.log("Backup Data!")
-}
-}, 1000);
 
 // Respon Cmd with media
 if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in db.data.sticker)) {
@@ -5002,8 +4991,8 @@ var search = await youtube(text);
 var convert = search.videos[0];
 if (!convert) throw 'Video/Audio Tidak Ditemukan';
 newReply('Menghubungi YouTube...')
-let ytmp3 = await fetchJson(`https://aemt.me/download/ytdl?url=${convert.url}`)
-let ukurane = `${ytmp3.result.size_mp3}`
+let musuk = await fetchJson(`https://aemt.me/download/ytdl?url=${convert.url}`)
+let ukurane = `${musuk.result.size_mp3}`
 let ukur = `${ukurane.split(' ')[0]}`
 if (ukur >= 15 && !isPremium) {
 return newReply(`File Audio [ ${ukurane} ], Anda Hanya Dapat Mendownload File Berukuran *15 MB* Dan Untuk Pengguna *Premium* Maksimal *60 MB*`) 
@@ -5026,9 +5015,10 @@ sourceUrl: convert.url
 }
 }, mentions: [m.sender]
 }}, {})
+let aud = musuk.result.mp3
 juna.sendMessage(m.chat, {
 audio: {
-url: ytmp3.result.mp3
+url: aud
 },
 mimetype: 'audio/mpeg',
 contextInfo: {
@@ -5055,8 +5045,8 @@ if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return newReply(
 if (!text) return newReply(`Example : ${prefix + command} https://youtube.com/ueb8h3bs`)
 newReply('Menghubungi YouTube...')
 try{
-let ytmp3 = await fetchJson(`https://aemt.me/download/ytdl?url=${text}`)
-let ukurane = `${ytmp3.result.size_mp3}`
+let musuk = await fetchJson(`https://aemt.me/download/ytdl?url=${text}`)
+let ukurane = `${musuk.result.size_mp3}`
 let ukur = `${ukurane.split(' ')[0]}`
 if (ukur >= 15 && !isPremium) {
 return newReply(`File Audio [ ${ukurane} ], Anda Hanya Dapat Mendownload File Berukuran *15 MB* Dan Untuk Pengguna *Premium* Maksimal *60 MB*`) 
@@ -5064,7 +5054,7 @@ return newReply(`File Audio [ ${ukurane} ], Anda Hanya Dapat Mendownload File Be
 if (ukur >= 60 && isPremium) {
 return newReply(`File Audio [ ${ukurane} ], Telah Melebihi *Batas Maksimum!*`) 
 }
-var caption = `*${ytmp3.result.title}*\n\n\n*⌬ Ext* : Search\n*⌬ ID* : ${ytmp3.result.id}\n*⌬ Size* : ${ukurane}\n\n\n_*Tunggu Sebentar, File Anda Sedang Dikirimkan...*_`;
+var caption = `*${musuk.result.title}*\n\n\n*⌬ Ext* : Search\n*⌬ ID* : ${musuk.result.id}\n*⌬ Size* : ${ukurane}\n\n\n_*Tunggu Sebentar, File Anda Sedang Dikirimkan...*_`;
 var pesan = juna.relayMessage(m.chat, {
 extendedTextMessage:{
 text: caption, 
@@ -5074,21 +5064,22 @@ title: "乂 YOUTUBE - AUDIO",
 mediaType: 1,
 previewType: 0,
 renderLargerThumbnail: true,
-thumbnailUrl: ytmp3.result.thumb,
+thumbnailUrl: musuk.result.thumb,
 sourceUrl: text
 }
 }, mentions: [m.sender]
 }}, {})
+let aud = musuk.result.mp3
 juna.sendMessage(m.chat, {
 audio: {
-url: ytmp3.result.mp3
+url: aud
 },
 mimetype: 'audio/mpeg',
 contextInfo: {
 externalAdReply: {
-title: ytmp3.result.title,
+title: musuk.result.title,
 body: "",
-thumbnailUrl: ytmp3.result.thumb,
+thumbnailUrl: musuk.result.thumb,
 sourceUrl: text,
 mediaType: 1,
 showAdAttribution: true,
@@ -6841,10 +6832,14 @@ newReply(`Tag/Reply Target Yang Mau Di Un-Banned`)
 }
 }
 break
-case 'updated': {
-if (!/js/.test(mime)) return newReply(`Reply File *junn.js* Untuk Di-update!`)
-let media = await juna.downloadMediaMessage(quoted)
-fs.writeFileSync(`./junn.js`, media)
+case 'getsesi': {
+media = fs.readFileSync('./sticker/creds.json')
+juna.sendMessage(m.chat, { document: media, fileName: 'creds.json', mimetype: 'application/json' }, { quoted: fkontak })
+}
+break
+case 'getbal': {
+media = fs.readFileSync('./database/balance.json')
+juna.sendMessage(m.chat, { document: media, fileName: 'balance.json', mimetype: 'application/json' }, { quoted: fkontak })
 }
 break
 case 'self': {
