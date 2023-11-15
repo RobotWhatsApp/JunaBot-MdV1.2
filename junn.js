@@ -865,7 +865,7 @@ return newReply(`File Audio [ ${ukurane} ], Telah Melebihi *Batas Maksimum!*`)
 }
 juna.sendMessage(m.chat, {
 audio: {
-url: `https://aemt.me/youtube?url=${budy}&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg`
+url: ytmp3.result.mp3
 },
 mimetype: 'audio/mpeg',
 contextInfo: {
@@ -5010,12 +5010,7 @@ return newReply(`File Audio [ ${ukurane} ], Anda Hanya Dapat Mendownload File Be
 }
 if (ukur >= 60 && isPremium) {
 return newReply(`File Audio [ ${ukurane} ], Telah Melebihi *Batas Maksimum!*`) 
-} else {
-var audioUrl
-try {
-audioUrl = `https://aemt.me/youtube?url=${convert.url}&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg`
-} catch (e) {
-audioUrl = `https://aemt.me/youtube?url=${convert.url}&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg`} 
+}
 var caption = `*${convert.title}*\n\n\n*⌬ Ext* : Search\n*⌬ ID* : ${convert.videoId}\n*⌬ Duration* : ${convert.timestamp}\n*⌬ Viewers* : ${convert.views}\n*⌬ Upload At* : ${convert.ago}\n*⌬ Author* : ${convert.author.name}\n*⌬ Channel* : ${convert.author.url}\n*⌬ Url* : ${convert.url}\n\n\n_*Tunggu Sebentar, File Anda Sedang Dikirimkan...*_`;
 var pesan = juna.relayMessage(m.chat, {
 extendedTextMessage:{
@@ -5033,7 +5028,7 @@ sourceUrl: convert.url
 }}, {})
 juna.sendMessage(m.chat, {
 audio: {
-url: audioUrl
+url: ytmp3.result.mp3
 },
 mimetype: 'audio/mpeg',
 contextInfo: {
@@ -5050,7 +5045,6 @@ renderLargerThumbnail: true
 }, {
 quoted: m
 });
-}
 } catch (e) {
 newReply(`*Hanya Dapat Mencari Lagu, Tidak Dapat Mencari Channel...*`);
 }
@@ -5087,7 +5081,7 @@ sourceUrl: text
 }}, {})
 juna.sendMessage(m.chat, {
 audio: {
-url: `https://aemt.me/youtube?url=${text}&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg`
+url: ytmp3.result.mp3
 },
 mimetype: 'audio/mpeg',
 contextInfo: {
@@ -5139,7 +5133,7 @@ if (ukur >= 60 && isPremium) {
 return newReply(`File Video [ ${ukurane} ], Telah Melebihi *Batas Maksimum!*`) 
 }
 var caption = `*${ytmp4.result.title}*\n\n\n*⌬ Ext* : Search\n*⌬ ID* : ${ytmp4.result.id}\n*⌬ Size* : ${ytmp4.result.size}\n\n\n_*Nih Banh, Gw Bantu Donlotin...*_`;
-juna.sendMessage(m.chat, { video: { url: `https://aemt.me/youtube?url=${text}&filter=videoonly&quality=highestvideo&contenttype=video/mp4` }, caption: caption }, {quoted: m})
+juna.sendMessage(m.chat, { video: { url: ytmp4.result.link }, caption: caption }, {quoted: m})
 }catch (error) {
 newReply(`*URL in valid*`)
 }
