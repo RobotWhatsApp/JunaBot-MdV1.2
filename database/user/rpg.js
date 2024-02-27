@@ -626,7 +626,7 @@ const addEmas = (sender, amount) => {
                 }
             })
             if (position !== false) {
-                _RPG[position].gold -= amount
+                _RPG[position].emas -= amount
                 fs.writeFileSync('./database/user/inventory.json', JSON.stringify(_RPG))
             }
         }
