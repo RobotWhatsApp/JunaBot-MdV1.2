@@ -2,7 +2,8 @@
     "wait": "*Loading...*",
     "error": {
         "Iv": "Link yang kamu berikan tidak valid",
-        "api": "Ups, terjadi kesalahan pada botkey, silahkan hubungi owner untuk memperbaikinya"
+        "api": "Ups, terjadi kesalahan pada botkey, silahkan hubungi owner untuk memperbaikinya",
+        "slh": "Ups, terjadi kesalahan, silahkan coba lagi dan periksa cara penulisan commandmu"
     },
     "OnlyGrup": "Perintah ini hanya bisa digunakan di grup",
     "OnlyPM": "Perintah ini hanya bisa digunakan di private message",
