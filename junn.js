@@ -865,7 +865,7 @@ m.reply(`${err}`)
 
 
 //DOWNLOAD MP3
-const downloadMp3 = async (Link ,name = "Audio", opt = "audio") => {
+const downloadMp3 = async (Link ,name = "Audio", opt = "doc") => {
 try{
 await ytdl.getInfo(Link);
 let mp3File = getRandom('.mp3')
@@ -873,8 +873,8 @@ ytdl(Link, {filter: 'audioonly'})
 .pipe(fs.createWriteStream(mp3File))
 .on("finish", async () => {
 if(opt == "audio") await juna.sendMessage(m.chat, {audio:  fs.readFileSync(mp3File), mimetype: 'audio/mpeg' },{ quoted: m })
-if(opt == "doc") await juna.sendMessage(m.chat, { document: fs.readFileSync(mp3File), fileName: name, mimetype: 'audio/mpeg'  }, { quoted: m })
-fs.unlinkSync(mp3File)
+if(opt == "doc") await juna.sendMessage(m.chat, { document: fs.readFileSync(mp3File), fileName: `${text}.mp3`, mimetype: 'audio/mpeg'  }, { quoted: m })
+fs.unlinkSync(`./${mp3File}`)
 })
 } catch (err){
 console.log(color(err))
@@ -919,10 +919,10 @@ m.reply(`*URL in valid*`);
 if (budy.match(`tiktok.com`) && !isAntiLinktt) {
 m.reply(`*「 TT LINK DETECTED 」*\n\n_Tunggu Sebentar, File Anda Sedang Didownload Secara Otomatis_`)
 try{
-let snaptik = await fetchJson(`https://api.lolhuman.xyz/api/tiktok?apikey=GataDios&url=${budy}`)
-juna.sendMessage(m.chat, { video: { url: snaptik.result.link }, caption: `Done boss ✅`}, {quoted: m})
+let anu = await fetchJson(`https://skizo.tech/api/tiktok?url=${budy}&apikey=${setting.XznKey}`)
+juna.sendMessage(m.chat, { video: { url: anu.data.play}, caption: `Done Cokk ✅`}, {quoted: m})
 }catch (error) {
-m.reply(`Maaf video ini tidak dapat di download\n\nCoba gunakan:\n.tiktok ${budy}`);
+m.reply(`Maaf video ini tidak dapat di download\n\nCoba gunakan:\n.tiktok`);
 }
 }
 if (budy.match(`instagram.com`)) {
@@ -8476,7 +8476,7 @@ if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(`
 if (!text) return m.reply(`Gunakan dengan cara ${prefix+command} *url*\n\n_Contoh_\n\n${prefix+command} https://vt.tiktok.com/ZS8KdFQcQ/`)
 m.reply(mess.wait)
 try{
-let snaptik = await fetchJson(`https://api.lolhuman.xyz/api/tiktok2?apikey=GataDios&url=${text}`)
+let snaptik = await fetchJson(`https://api.lolhuman.xyz/api/tiktok?apikey=GataDios&url=${text}`)
 juna.sendMessage(m.chat, { video: { url: snaptik.result }, caption: `Done boss ✅`}, {quoted: m})
 }catch (error) {
 m.reply(`Maaf video ini tidak dapat di download\n\nCoba gunakan:\n.tiktok3 ${text}`);
@@ -8489,8 +8489,8 @@ if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(`
 if (!text) return m.reply(`Gunakan dengan cara ${prefix+command} *url*\n\n_Contoh_\n\n${prefix+command} https://vt.tiktok.com/ZS8KdFQcQ/`)
 m.reply(mess.wait)
 try{
-let snaptik = await fetchJson(`https://api.lolhuman.xyz/api/tiktok?apikey=GataDios&url=${text}`)
-juna.sendMessage(m.chat, { video: { url: snaptik.result.link }, caption: `Done boss ✅`}, {quoted: m})
+let anu = await fetchJson(`https://skizo.tech/api/tiktok?url=${text}&apikey=${setting.XznKey}`)
+juna.sendMessage(m.chat, { video: { url: anu.data.play}, caption: `Done Cokk ✅`}, {quoted: m})
 }catch (error) {
 m.reply(`Maaf video ini tidak dapat di download\n\nHarap lapor owner agar di diperbaiki`);
 }
@@ -9244,6 +9244,7 @@ case 'hedsot': case 'buang': case 'kick': {
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
 if (!isCreator && !isAdmins) return m.reply('Fitur Khusus admin!')
 if (!isBotAdmins) return m.reply(mess.BotAdmin)
+if (!m.quoted && !m.mentionedJid[0] && isNaN(parseInt(args[0]))) return m.reply('Tag/reply pesan target yang ingin di kick!')
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await juna.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => m.reply('Sukses Kick Member Tydyak Berguna ✅')).catch((err) => m.reply('Tag/reply pesan target yang ingin di kick!'))
 }
@@ -9252,6 +9253,7 @@ case 'add': {
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
 if (!isCreator && !isAdmins) return m.reply('Fitur Khusus admin!')
 if (!isBotAdmins) return m.reply(mess.BotAdmin)
+if (!m.quoted && !m.mentionedJid[0] && isNaN(parseInt(args[0]))) return m.reply('Tag/reply pesan target yang ingin di add!')
 let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await juna.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => m.reply('Sukses Add Sepuh ✅')).catch((err) => m.reply('❌ Terjadi kesalahan, mungkin nmr nya privat'))
 }
@@ -9260,6 +9262,7 @@ case 'promote': case 'pm': {
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
 if (!isCreator && !isAdmins) return m.reply('Fitur Khusus admin!')
 if (!isBotAdmins) return m.reply(mess.BotAdmin)
+if (!m.quoted && !m.mentionedJid[0] && isNaN(parseInt(args[0]))) return m.reply('Tag/reply pesan target yang ingin di jadikan admin!')
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await juna.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => m.reply('Sukses promote member✅')).catch((err) => m.reply('❌ Terjadi kesalahan'))
 }
@@ -9268,6 +9271,7 @@ case 'demote': case 'dm': {
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
 if (!isCreator && !isAdmins) return m.reply('Fitur Khusus admin!')
 if (!isBotAdmins) return m.reply(mess.BotAdmin)
+if (!m.quoted && !m.mentionedJid[0] && isNaN(parseInt(args[0]))) return m.reply('Tag/reply pesan target yang ingin di un admin!')
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await juna.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => m.reply('Sukses demote admin✅')).catch((err) => m.reply('❌ Terjadi kesalahan'))
 }
@@ -9384,13 +9388,13 @@ m.reply(`Berhasil delete session room tictactoe !`)
 break
 case 'suitpvp': case 'suit': {
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
+if (m.mentionedJid[0] === m.sender) return m.reply(`Tidak bisa bermain dengan diri sendiri !`)
+if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @0`, m.chat, { mentions: '0@s.whatsapp.net' })
 this.suit = this.suit ? this.suit : {}
 let poin = 10
 let poin_lose = 10
 let timeout = 60000
 if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) m.reply(`Selesaikan suit mu yang sebelumnya`)
-if (m.mentionedJid[0] === m.sender) return m.reply(`Tidak bisa bermain dengan diri sendiri !`)
-if (!m.mentionedJid[0]) return m.reply(`_Siapa yang ingin kamu tantang?_\nTag orangnya..\n\nContoh : ${prefix}suit @0`, m.chat, { mentions: '0@s.whatsapp.net' })
 if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) return m.reply(`Orang yang kamu tantang sedang bermain suit bersama orang lain`)
 let id = 'suit_' + new Date() * 1
 let caption = `_*SUIT PvP*_
@@ -9803,7 +9807,7 @@ try {
 const { TiktokStalk } = require("@tobyg74/tiktok-api-dl")
 
 TiktokStalk(text).then((result) => {
-juna.sendMessage(m.chat, { image: { url: result.result.users.avatarThumb }, caption: `Nickname : ${result.result.users.nickname}\nUsername : ${result.result.users.username}\nPostingan : ${result.result.stats.videoCount}\nFollowers : ${result.result.stats.followerCount}\nFollowing : ${result.result.stats.followingCount}\nFriends : ${result.result.stats.friendCount}\nBio : ${result.result.users.signature}`}, {quoted: m})
+m.reply(`*乂 TIKTOK - STALK*\n\nNickname : ${result.result.users.nickname}\nUsername : ${result.result.users.username}\nPostingan : ${result.result.stats.videoCount}\nFollowers : ${result.result.stats.followerCount}\nFollowing : ${result.result.stats.followingCount}\nFriends : ${result.result.stats.friendCount}\nBio : ${result.result.users.signature}`)
 })
 } catch (err) {
 m.reply(mess.error.slh)
@@ -10418,7 +10422,7 @@ m.reply("Autobio berhasil dinonaktifkan")
 m.reply(`${prefix+command} on -- _mengaktifkan_\n${prefix+command} off -- _Menonaktifkan_`)
  }}
 break
-case'gruponly': {
+case 'gconly': case'gruponly': {
 if (!isCreator) return m.reply(mess.OnlyOwner)
 if (args[0] === "on") {
 if (setting.gruponly === true) return m.reply("Udh on")
@@ -13926,14 +13930,14 @@ break
 case 'slime':
 case 'killslime':{
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
-if (m.isGroup) return m.reply('Fitur Overload Coba Lagi Besok!')
+if (m.isGroup) return m.reply('Fitur Di nonaktifkan, Coba lagi besok!')
 if (!isPetualang) return m.reply('Kamu belum terdaftar dalam database rpg silahkan ketik .joinrpg')
 if (isCekDarah < 1) return m.reply(`Kamu Lelah!, Coba Sembuhkan Menggunakan Ramuan`) 
 ez = Math.ceil(Math.random() * 400)
 addLevelingXp(m.sender, ez)
-a = randomNomor(55)
+a = randomNomor(10)
 b = randomNomor(400)
-c = randomNomor(80)
+c = randomNomor(10)
 d = randomNomor(3)
 kurangDarah(m.sender, 20)
 addLevelingXp(m.sender, ez)
@@ -13942,21 +13946,21 @@ addEmas(m.sender, a)
 addBesi(m.sender, c)
 addDm(m.sender, d)
 bufutI = "https://telegra.ph/file/c34a444fa8824d8bb6e18.jpg"
-var hg = `*Misi kill Slime*\n\n🎁 *Hadiah untuk killing Slime*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jika Spam Akan Di banned!!!_`
+var hg = `*Misi kill Slime*\n\n🎁 *Hadiah untuk killing Slime*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jangan Spam Atau Fitur Dinonaktifkan!!!_`
 juna.sendMessage(m.chat, {image:{url:bufutI},caption: hg} , {quoted:m}) 
 }
 break
 case 'goblin':
 case 'killgoblin':{
-if (m.isGroup) return m.reply('Fitur Overload Coba Lagi Besok!')
+if (m.isGroup) return m.reply('Fitur Di nonaktifkan, Coba lagi besok!')
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
 if (!isPetualang) return m.reply('Kamu belum terdaftar dalam database rpg silahkan ketik .joinrpg')
 if (isCekDarah < 1) return m.reply(`Kamu Lelah!, Coba Sembuhkan Menggunakan Ramuan`) 
 ez = Math.ceil(Math.random() * 500)
 addLevelingXp(m.sender, ez)
-a = randomNomor(65)
+a = randomNomor(10)
 b = randomNomor(500)
-c = randomNomor(90)
+c = randomNomor(10)
 d = randomNomor(5)
 kurangDarah(m.sender, 20)
 addLevelingXp(m.sender, ez)
@@ -13965,21 +13969,21 @@ addEmas(m.sender, a)
 addBesi(m.sender, c)
 addDm(m.sender, d)
 bufo = "https://telegra.ph/file/19bdc38aaafda29f7afe1.jpg"
-var hg = `*Misi kill Goblin*\n\n🎁 *Hadiah untuk killing Goblin*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jika Spam Akan Di banned!!!_`
+var hg = `*Misi kill Goblin*\n\n🎁 *Hadiah untuk killing Goblin*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jangan Spam Atau Fitur Dinonaktifkan!!!_`
 juna.sendMessage(m.chat, {image:{url:bufo}, caption: hg }, {quoted:m})
 }
 break
 case 'devil':
 case 'killdevil':{
-if (m.isGroup) return m.reply('Fitur Overload Coba Lagi Besok!')
+if (m.isGroup) return m.reply('Fitur Di nonaktifkan, Coba lagi besok!')
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
 if (!isPetualang) return m.reply('Kamu belum terdaftar dalam database rpg silahkan ketik .joinrpg')
 if (isCekDarah < 1) return m.reply(`Kamu Lelah!, Coba Sembuhkan Menggunakan Ramuan`) 
 ez = Math.ceil(Math.random() * 600)
 addLevelingXp(m.sender, ez)
-a = randomNomor(70)
+a = randomNomor(10)
 b = randomNomor(600)
-c = randomNomor(95)
+c = randomNomor(10)
 d = randomNomor(6)
 kurangDarah(m.sender, 20)
 addLevelingXp(m.sender, ez)
@@ -13988,21 +13992,21 @@ addEmas(m.sender, a)
 addBesi(m.sender, c)
 addDm(m.sender, d)
 bufas = "https://telegra.ph/file/dbecd2f871988f52bf555.jpg"
-var hg = `*Misi kill Devil*\n\n🎁 *Hadiah untuk killing Devil*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jika Spam Akan Di banned!!!_`
+var hg = `*Misi kill Devil*\n\n🎁 *Hadiah untuk killing Devil*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jangan Spam Atau Fitur Dinonaktifkan!!!_`
 juna.sendMessage(m.chat, {image:{url: bufas}, caption: hg }, {quoted:m})
 }
 break
 case 'behemoth':
 case 'killbehemoth':{
-if (m.isGroup) return m.reply('Fitur Overload Coba Lagi Besok!')
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
+if (m.isGroup) return m.reply('Fitur Di nonaktifkan, Coba lagi besok!')
 if (!isPetualang) return m.reply('Kamu belum terdaftar dalam database rpg silahkan ketik .joinrpg')
 if (isCekDarah < 1) return m.reply(`Kamu Lelah!, Coba Sembuhkan Menggunakan Ramuan`) 
 ez = Math.ceil(Math.random() * 700)
 addLevelingXp(m.sender, ez)
-a = randomNomor(75)
+a = randomNomor(10)
 b = randomNomor(600)
-c = randomNomor(100)
+c = randomNomor(10)
 d = randomNomor(7)
 kurangDarah(m.sender, 20)
 addLevelingXp(m.sender, ez)
@@ -14011,20 +14015,21 @@ addEmas(m.sender, a)
 addBesi(m.sender, c)
 addDm(m.sender, d)
 batai = "https://telegra.ph/file/43259a7d8accff8b627c0.jpg"
-var hg = `*Misi kill Behemoth*\n\n🎁 *Hadiah untuk kiling Behemoth*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jika Spam Akan Di banned!!!_`
+var hg = `*Misi kill Behemoth*\n\n🎁 *Hadiah untuk kiling Behemoth*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold:* ${a}\n ┊ *Diamond:* ${d}\n\n*Terima kasih telah menjalankan misi ini*\n\n_Jangan Spam Atau Fitur Dinonaktifkan!!!_`
 juna.sendMessage(m.chat, {image:{url: batai}, caption: hg }, {quoted:m})
 }
 break
 case 'demon':
 case 'killdemon':{
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
+if (m.isGroup) return m.reply('Fitur Di nonaktifkan, Coba lagi besok!')
 if (!isPetualang) return m.reply('Kamu belum terdaftar dalam database rpg silahkan ketik .joinrpg')
 if (isCekDarah < 1) return m.reply(`Kamu Lelah!, Coba Sembuhkan Menggunakan Ramuan`) 
 ez = Math.ceil(Math.random() * 850)
 addLevelingXp(m.sender, ez)
-a = randomNomor(90)
+a = randomNomor(10)
 b = randomNomor(900)
-c = randomNomor(120)
+c = randomNomor(10)
 d = randomNomor(10)
 kurangDarah(m.sender, 20)
 addLevelingXp(m.sender, ez)
@@ -14033,20 +14038,20 @@ addEmas(m.sender, a)
 addBesi(m.sender, c)
 addDm(m.sender, d)
 bhuu = "https://telegra.ph/file/4a264a10ea2e5f18314f1.jpg"
-var hg = `*Misi kill Demon*\n🎁 *Demon Kill Reward*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold*: ${a}\n ┊ *Diamond:* ${d}\n\n*Terima Kasih Telah Melaksanakan Misi Ini*\n\n_Jika Spam Akan Di banned!!!_`
+var hg = `*Misi kill Demon*\n🎁 *Demon Kill Reward*\n ┊ *Money:* Rp ${b}\n ┊ *Iron:* ${c}\n ┊ *Gold*: ${a}\n ┊ *Diamond:* ${d}\n\n*Terima Kasih Telah Melaksanakan Misi Ini*\n\n_Jangan Spam Atau Fitur Dinonaktifkan!!!_`
 juna.sendMessage(m.chat, {image: {url: bhuu}, caption: hg }, {quoted:m})
 }
 break
 case 'demonking':
 case 'killdemonking':{
-if (m.isGroup) return m.reply('Fitur Overload Coba Lagi Besok!')
 if (!m.isGroup) return m.reply('Fitur Khusus Group!')
+if (m.isGroup) return m.reply('Fitur Di nonaktifkan, Coba lagi besok!')
 if (!isPetualang) return m.reply('Kamu belum terdaftar dalam database rpg silahkan ketik .joinrpg')
 if (isCekDarah < 1) return m.reply(`Kamu Lelah!, Coba Sembuhkan Menggunakan Ramuan`) 
 ez = Math.ceil(Math.random() * 1000)
-a = randomNomor(90)
-b = randomNomor(900)
-c = randomNomor(120)
+a = randomNomor(10)
+b = randomNomor(500)
+c = randomNomor(10)
 d = randomNomor(10)
 kurangDarah(m.sender, 20)
 addLevelingXp(m.sender, ez)
@@ -14055,7 +14060,7 @@ addEmas(m.sender, a)
 addBesi(m.sender, c)
 addDm(m.sender, b)
 bhuud = "https://telegra.ph/file/cdf482a8de192189057d8.jpg"
-var hg = `*Misi kill DemonKing*\n\n🎁 *DemonKing Kill Reward*\n ┊ *Money* : Rp ${b}\n ┊ *Iron :* ${c}\n ┊ *Gold :* ${a}\n ┊ *Diamond :* ${d}\n\n*Terima Kasih Telah Melaksanakan Misi Ini*\n\n_Jika Spam Akan Di banned!!!_`
+var hg = `*Misi kill DemonKing*\n\n🎁 *DemonKing Kill Reward*\n ┊ *Money* : Rp ${b}\n ┊ *Iron :* ${c}\n ┊ *Gold :* ${a}\n ┊ *Diamond :* ${d}\n\n*Terima Kasih Telah Melaksanakan Misi Ini*\n\n_Jangan Spam Atau Fitur Dinonaktifkan!!!_`
 juna.sendMessage(m.chat, {image:{url: bhuud}, caption: hg }, {quoted:m})
 }
 break
