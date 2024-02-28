@@ -2561,7 +2561,7 @@
       },
       {
         "nama": "limit",
-        "count": 110
+        "count": 132
       },
       {
         "nama": "allmenu",
@@ -2605,7 +2605,7 @@
       },
       {
         "nama": "menu",
-        "count": 7
+        "count": 8
       },
       {
         "nama": "hd",
@@ -2621,7 +2621,7 @@
       },
       {
         "nama": "play",
-        "count": 22
+        "count": 23
       },
       {
         "nama": "tebakbendera",
@@ -2649,7 +2649,7 @@
       },
       {
         "nama": "gojek",
-        "count": 3
+        "count": 4
       },
       {
         "nama": "vreden",
@@ -2657,7 +2657,7 @@
       },
       {
         "nama": "killdemon",
-        "count": 77
+        "count": 79
       },
       {
         "nama": "demon",
@@ -2681,7 +2681,7 @@
       },
       {
         "nama": "topglobal",
-        "count": 32
+        "count": 33
       },
       {
         "nama": "transfee",
@@ -2729,7 +2729,7 @@
       },
       {
         "nama": "gamemenu",
-        "count": 2
+        "count": 4
       },
       {
         "nama": "suaunkata",
@@ -2777,7 +2777,7 @@
       },
       {
         "nama": "suit",
-        "count": 39
+        "count": 41
       },
       {
         "nama": "suitpvp",
@@ -2877,7 +2877,7 @@
       },
       {
         "nama": "downloadmenu",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "mediafire",
@@ -2953,7 +2953,7 @@
       },
       {
         "nama": "kick",
-        "count": 6
+        "count": 8
       },
       {
         "nama": "gimage",
@@ -2985,7 +2985,7 @@
       },
       {
         "nama": "lomit",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "hdr",
@@ -3013,7 +3013,7 @@
       },
       {
         "nama": "mingguan",
-        "count": 5
+        "count": 6
       },
       {
         "nama": "ramuan",
@@ -3101,7 +3101,7 @@
       },
       {
         "nama": "tiktok",
-        "count": 1
+        "count": 4
       },
       {
         "nama": "harian",
@@ -3125,7 +3125,7 @@
       },
       {
         "nama": "bot",
-        "count": 15
+        "count": 17
       },
       {
         "nama": "tr",
@@ -3133,7 +3133,7 @@
       },
       {
         "nama": "ai",
-        "count": 3
+        "count": 8
       },
       {
         "nama": "si",
@@ -3153,7 +3153,7 @@
       },
       {
         "nama": "ping",
-        "count": 3
+        "count": 7
       },
       {
         "nama": "grupmenu",
@@ -3181,7 +3181,7 @@
       },
       {
         "nama": "antitoxic",
-        "count": 9
+        "count": 11
       },
       {
         "nama": "pm",
@@ -3189,7 +3189,7 @@
       },
       {
         "nama": "antilink",
-        "count": 4
+        "count": 7
       },
       {
         "nama": "antitoxuc",
@@ -3197,7 +3197,7 @@
       },
       {
         "nama": "welcome",
-        "count": 3
+        "count": 6
       },
       {
         "nama": "dd",
@@ -3205,7 +3205,7 @@
       },
       {
         "nama": "buylimit",
-        "count": 8
+        "count": 15
       },
       {
         "nama": "audiotiktok",
@@ -3213,14 +3213,50 @@
       },
       {
         "nama": "closetime",
-        "count": 3
+        "count": 5
       },
       {
         "nama": "close",
-        "count": 2
+        "count": 15
       },
       {
         "nama": "tidur",
+        "count": 1
+      },
+      {
+        "nama": "buylimit..",
+        "count": 1
+      },
+      {
+        "nama": "open",
+        "count": 4
+      },
+      {
+        "nama": "group",
+        "count": 4
+      },
+      {
+        "nama": "setwelcome",
+        "count": 2
+      },
+      {
+        "nama": "meminta",
+        "count": 1
+      },
+      {
+        "nama": "cloar",
+        "count": 1
+      },
+      {
+        "nama": "storemenu",
+        "count": 1
+      },
+      {
+        "nama": "casino",
+        "count": 38
+      },
+      {
+        "nama": "linit",
         "count": 1
       }
     ]
@@ -3263,15 +3299,15 @@
       },
       {
         "nama": "susunkata",
-        "count": 18
+        "count": 24
       },
       {
         "nama": "limit",
-        "count": 7
+        "count": 16
       },
       {
         "nama": "audio",
-        "count": 7
+        "count": 13
       },
       {
         "nama": "sepi",
@@ -3283,23 +3319,39 @@
       },
       {
         "nama": "buylimit",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "buyglimit",
-        "count": 8
+        "count": 11
       },
       {
         "nama": "buygamelimit",
-        "count": 6
+        "count": 9
       },
       {
         "nama": "bantuan",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "tebakbendera",
-        "count": 12
+        "count": 17
+      },
+      {
+        "nama": "daftar",
+        "count": 2
+      },
+      {
+        "nama": "mingguan",
+        "count": 2
+      },
+      {
+        "nama": "bulanan",
+        "count": 1
+      },
+      {
+        "nama": "qc",
+        "count": 2
       }
     ]
   },
@@ -3321,7 +3373,7 @@
     "db": [
       {
         "nama": "tes",
-        "count": 208
+        "count": 227
       },
       {
         "nama": "afk",
@@ -3329,7 +3381,7 @@
       },
       {
         "nama": "transfer",
-        "count": 88
+        "count": 91
       },
       {
         "nama": "dashboard",
@@ -3349,11 +3401,11 @@
       },
       {
         "nama": "ping",
-        "count": 40
+        "count": 46
       },
       {
         "nama": "play",
-        "count": 32
+        "count": 35
       },
       {
         "nama": "kirimii",
@@ -3381,7 +3433,7 @@
       },
       {
         "nama": "addbal",
-        "count": 23
+        "count": 25
       },
       {
         "nama": "ai",
@@ -3393,7 +3445,7 @@
       },
       {
         "nama": "tf",
-        "count": 17
+        "count": 19
       },
       {
         "nama": "gi",
@@ -3429,11 +3481,11 @@
       },
       {
         "nama": "antitoxic",
-        "count": 15
+        "count": 17
       },
       {
         "nama": "delchat",
-        "count": 13
+        "count": 14
       },
       {
         "nama": "ssweb",
@@ -3453,7 +3505,7 @@
       },
       {
         "nama": "listgc",
-        "count": 12
+        "count": 13
       },
       {
         "nama": "listprem",
@@ -3481,11 +3533,11 @@
       },
       {
         "nama": "menu",
-        "count": 9
+        "count": 12
       },
       {
         "nama": "qc",
-        "count": 9
+        "count": 14
       },
       {
         "nama": "cekdrive",
@@ -3509,7 +3561,7 @@
       },
       {
         "nama": "delsampah2",
-        "count": 9
+        "count": 11
       },
       {
         "nama": "galau",
@@ -3517,7 +3569,7 @@
       },
       {
         "nama": "infogc",
-        "count": 8
+        "count": 9
       },
       {
         "nama": "smeme",
@@ -3541,11 +3593,11 @@
       },
       {
         "nama": "delsampah",
-        "count": 8
+        "count": 10
       },
       {
         "nama": "close",
-        "count": 8
+        "count": 9
       },
       {
         "nama": "resetlimit",
@@ -3753,7 +3805,7 @@
       },
       {
         "nama": "listpc",
-        "count": 3
+        "count": 4
       },
       {
         "nama": "sendgc",
@@ -3765,7 +3817,7 @@
       },
       {
         "nama": "tebakaplikasi",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "ban",
@@ -3929,7 +3981,7 @@
       },
       {
         "nama": "kick",
-        "count": 3
+        "count": 4
       },
       {
         "nama": "intro",
@@ -3953,7 +4005,7 @@
       },
       {
         "nama": "join",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "lopyu",
@@ -4017,7 +4069,7 @@
       },
       {
         "nama": "tea",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "baka",
@@ -4273,7 +4325,7 @@
       },
       {
         "nama": "gconly",
-        "count": 1
+        "count": 5
       },
       {
         "nama": "jadwalshalat",
@@ -4301,6 +4353,14 @@
       },
       {
         "nama": "antivirtex",
+        "count": 2
+      },
+      {
+        "nama": "gruponly",
+        "count": 1
+      },
+      {
+        "nama": "delsetwelcome",
         "count": 2
       }
     ]
@@ -4703,7 +4763,7 @@
       },
       {
         "nama": "afk",
-        "count": 109
+        "count": 111
       },
       {
         "nama": "group",
@@ -4711,7 +4771,7 @@
       },
       {
         "nama": "addprem",
-        "count": 44
+        "count": 50
       },
       {
         "nama": "infobot",
@@ -4839,7 +4899,7 @@
       },
       {
         "nama": "d",
-        "count": 80
+        "count": 81
       },
       {
         "nama": "pinh",
@@ -4871,7 +4931,7 @@
       },
       {
         "nama": "kick",
-        "count": 8
+        "count": 10
       },
       {
         "nama": "pushkontak",
@@ -4891,11 +4951,11 @@
       },
       {
         "nama": "pin",
-        "count": 90
+        "count": 93
       },
       {
         "nama": "cekganteng",
-        "count": 12
+        "count": 14
       },
       {
         "nama": "iya",
@@ -4975,7 +5035,7 @@
       },
       {
         "nama": "hidetag",
-        "count": 15
+        "count": 17
       },
       {
         "nama": "nyerah",
@@ -5187,7 +5247,7 @@
       },
       {
         "nama": "hentai",
-        "count": 4
+        "count": 5
       },
       {
         "nama": "kurang",
@@ -5491,7 +5551,7 @@
       },
       {
         "nama": "",
-        "count": 5
+        "count": 6
       },
       {
         "nama": "killpochita",
@@ -5532,6 +5592,10 @@
       {
         "nama": "ytvideo",
         "count": 1
+      },
+      {
+        "nama": "gconly",
+        "count": 1
       }
     ]
   },
@@ -5553,7 +5617,7 @@
       },
       {
         "nama": "buylimit",
-        "count": 6
+        "count": 8
       },
       {
         "nama": "cekpremium",
@@ -5561,11 +5625,11 @@
       },
       {
         "nama": "afk",
-        "count": 27
+        "count": 29
       },
       {
         "nama": "pin",
-        "count": 225
+        "count": 243
       },
       {
         "nama": "s",
@@ -5581,7 +5645,7 @@
       },
       {
         "nama": "hd",
-        "count": 15
+        "count": 16
       },
       {
         "nama": "tebakkata",
@@ -5605,15 +5669,15 @@
       },
       {
         "nama": "family100",
-        "count": 18
+        "count": 22
       },
       {
         "nama": "limit",
-        "count": 8
+        "count": 9
       },
       {
         "nama": "cekcantik",
-        "count": 2
+        "count": 6
       },
       {
         "nama": "bantuan",
@@ -5621,7 +5685,7 @@
       },
       {
         "nama": "cekganteng",
-        "count": 3
+        "count": 11
       },
       {
         "nama": "tf",
@@ -5701,6 +5765,10 @@
       },
       {
         "nama": "buylimit5",
+        "count": 1
+      },
+      {
+        "nama": "family00",
         "count": 1
       }
     ]
@@ -6008,7 +6076,7 @@
       },
       {
         "nama": "pin",
-        "count": 22
+        "count": 23
       },
       {
         "nama": "cuaca",
@@ -6160,7 +6228,7 @@
       },
       {
         "nama": "linkgc",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "#tebakhero",
@@ -6328,7 +6396,7 @@
       },
       {
         "nama": "pin",
-        "count": 65
+        "count": 72
       },
       {
         "nama": "galau",
@@ -6336,11 +6404,11 @@
       },
       {
         "nama": "sticker",
-        "count": 34
+        "count": 35
       },
       {
         "nama": "balance",
-        "count": 47
+        "count": 49
       },
       {
         "nama": "bantuan",
@@ -6348,11 +6416,11 @@
       },
       {
         "nama": "afk",
-        "count": 106
+        "count": 114
       },
       {
         "nama": "buylimit",
-        "count": 59
+        "count": 65
       },
       {
         "nama": "play",
@@ -6392,7 +6460,7 @@
       },
       {
         "nama": "couple",
-        "count": 4
+        "count": 5
       },
       {
         "nama": "tebaksiapa",
@@ -6400,11 +6468,11 @@
       },
       {
         "nama": "allmenu",
-        "count": 7
+        "count": 8
       },
       {
         "nama": "s",
-        "count": 15
+        "count": 16
       },
       {
         "nama": "bot",
@@ -6412,7 +6480,7 @@
       },
       {
         "nama": "confess",
-        "count": 3
+        "count": 4
       },
       {
         "nama": "nyerah",
@@ -6520,7 +6588,7 @@
       },
       {
         "nama": "cekcantik",
-        "count": 1
+        "count": 6
       },
       {
         "nama": "quotes",
@@ -6544,7 +6612,7 @@
       },
       {
         "nama": "family100",
-        "count": 4
+        "count": 5
       },
       {
         "nama": "tebakgame",
@@ -6825,6 +6893,10 @@
       {
         "nama": "tiktok",
         "count": 1
+      },
+      {
+        "nama": "lirik",
+        "count": 3
       }
     ]
   },
@@ -6841,7 +6913,7 @@
       },
       {
         "nama": "pin",
-        "count": 4
+        "count": 6
       },
       {
         "nama": "sini",
@@ -6929,6 +7001,14 @@
       },
       {
         "nama": "sperma",
+        "count": 1
+      },
+      {
+        "nama": "push",
+        "count": 1
+      },
+      {
+        "nama": "pushkontak",
         "count": 1
       }
     ]
@@ -7296,7 +7376,7 @@
       },
       {
         "nama": "play",
-        "count": 20
+        "count": 21
       },
       {
         "nama": "playy",
@@ -7320,11 +7400,39 @@
       },
       {
         "nama": "simi",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "#play",
         "count": 3
+      },
+      {
+        "nama": "kick",
+        "count": 2
+      },
+      {
+        "nama": "sell",
+        "count": 3
+      },
+      {
+        "nama": "me",
+        "count": 1
+      },
+      {
+        "nama": "kildemon",
+        "count": 1
+      },
+      {
+        "nama": "killdemon",
+        "count": 1
+      },
+      {
+        "nama": "kik",
+        "count": 2
+      },
+      {
+        "nama": "paly",
+        "count": 1
       }
     ]
   },
@@ -7798,11 +7906,11 @@
       },
       {
         "nama": "me",
-        "count": 30
+        "count": 34
       },
       {
         "nama": "sell",
-        "count": 29
+        "count": 33
       },
       {
         "nama": "potion",
@@ -7810,15 +7918,15 @@
       },
       {
         "nama": "heal",
-        "count": 33
+        "count": 45
       },
       {
         "nama": "killdemon",
-        "count": 164
+        "count": 233
       },
       {
         "nama": "balance",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "miming",
@@ -7830,7 +7938,7 @@
       },
       {
         "nama": "topglobal",
-        "count": 2
+        "count": 4
       },
       {
         "nama": "buypotion",
@@ -7894,6 +8002,18 @@
       },
       {
         "nama": "goplanet",
+        "count": 1
+      },
+      {
+        "nama": "kick",
+        "count": 1
+      },
+      {
+        "nama": "hidetag",
+        "count": 2
+      },
+      {
+        "nama": "lirik",
         "count": 1
       }
     ]
@@ -9408,7 +9528,7 @@
       },
       {
         "nama": "pin",
-        "count": 45
+        "count": 48
       },
       {
         "nama": "ai",
@@ -9432,11 +9552,11 @@
       },
       {
         "nama": "afk",
-        "count": 8
+        "count": 10
       },
       {
         "nama": "smeme",
-        "count": 11
+        "count": 13
       },
       {
         "nama": "tf",
@@ -9500,7 +9620,7 @@
       },
       {
         "nama": "tebakhero",
-        "count": 13
+        "count": 16
       },
       {
         "nama": "harley",
@@ -9520,7 +9640,7 @@
       },
       {
         "nama": "tebakpresiden",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "allmenu",
@@ -9556,6 +9676,10 @@
       },
       {
         "nama": "top",
+        "count": 1
+      },
+      {
+        "nama": ".",
         "count": 1
       }
     ]
@@ -9598,7 +9722,7 @@
       },
       {
         "nama": "nyerah",
-        "count": 18
+        "count": 19
       },
       {
         "nama": "tebakkata",
@@ -9610,7 +9734,7 @@
       },
       {
         "nama": "bantuan",
-        "count": 44
+        "count": 45
       },
       {
         "nama": "simi",
@@ -9630,7 +9754,7 @@
       },
       {
         "nama": "mingguan",
-        "count": 9
+        "count": 10
       },
       {
         "nama": "bulanan",
@@ -9814,7 +9938,7 @@
       },
       {
         "nama": "me",
-        "count": 72
+        "count": 74
       },
       {
         "nama": "jual",
@@ -9946,7 +10070,7 @@
       },
       {
         "nama": "killdemon",
-        "count": 138
+        "count": 143
       },
       {
         "nama": "apk",
@@ -9970,7 +10094,7 @@
       },
       {
         "nama": "heal",
-        "count": 24
+        "count": 25
       },
       {
         "nama": "sifat",
@@ -10014,7 +10138,7 @@
       },
       {
         "nama": "p",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "waktu",
@@ -10034,6 +10158,14 @@
       },
       {
         "nama": "limitttttt",
+        "count": 1
+      },
+      {
+        "nama": "family100",
+        "count": 2
+      },
+      {
+        "nama": "family",
         "count": 1
       }
     ]
@@ -11847,7 +11979,7 @@
       },
       {
         "nama": "afk",
-        "count": 47
+        "count": 55
       },
       {
         "nama": "play",
@@ -11911,7 +12043,7 @@
       },
       {
         "nama": "topglobal",
-        "count": 60
+        "count": 64
       },
       {
         "nama": "tf",
@@ -11983,7 +12115,7 @@
       },
       {
         "nama": "balance",
-        "count": 44
+        "count": 45
       },
       {
         "nama": "tebakhero",
@@ -12039,7 +12171,7 @@
       },
       {
         "nama": "me",
-        "count": 94
+        "count": 99
       },
       {
         "nama": "hunt",
@@ -12239,11 +12371,11 @@
       },
       {
         "nama": "heal",
-        "count": 54
+        "count": 63
       },
       {
         "nama": "sell",
-        "count": 49
+        "count": 55
       },
       {
         "nama": "buy",
@@ -12283,11 +12415,11 @@
       },
       {
         "nama": "killdemon",
-        "count": 319
+        "count": 366
       },
       {
         "nama": "kill",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "killdomen",
@@ -12343,6 +12475,10 @@
       },
       {
         "nama": "audio",
+        "count": 1
+      },
+      {
+        "nama": "ppp",
         "count": 1
       }
     ]
@@ -12757,7 +12893,7 @@
       },
       {
         "nama": "menu",
-        "count": 9
+        "count": 11
       },
       {
         "nama": "cewekasianmenu",
@@ -12769,19 +12905,19 @@
       },
       {
         "nama": "galau",
-        "count": 10
+        "count": 13
       },
       {
         "nama": "randomsticker",
-        "count": 5
+        "count": 6
       },
       {
         "nama": "smeme",
-        "count": 33
+        "count": 37
       },
       {
         "nama": "lonte",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "attp",
@@ -12869,7 +13005,7 @@
       },
       {
         "nama": "play",
-        "count": 38
+        "count": 43
       },
       {
         "nama": "twitter",
@@ -12889,7 +13025,7 @@
       },
       {
         "nama": "asupanmenu",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "geayubi",
@@ -12897,7 +13033,7 @@
       },
       {
         "nama": "riri",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "alcakenya",
@@ -12945,7 +13081,7 @@
       },
       {
         "nama": "nsfwmenu",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "anal",
@@ -12953,7 +13089,7 @@
       },
       {
         "nama": "ahegao",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "panties",
@@ -12961,7 +13097,7 @@
       },
       {
         "nama": "zettai",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "undergrass",
@@ -12973,7 +13109,7 @@
       },
       {
         "nama": "neko",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "orgy",
@@ -13017,7 +13153,7 @@
       },
       {
         "nama": "allmenu",
-        "count": 6
+        "count": 9
       },
       {
         "nama": "cekprem",
@@ -13101,7 +13237,7 @@
       },
       {
         "nama": "qc",
-        "count": 14
+        "count": 15
       },
       {
         "nama": "emojimix",
@@ -13189,7 +13325,7 @@
       },
       {
         "nama": "indonesia",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "addcmd",
@@ -13197,7 +13333,7 @@
       },
       {
         "nama": "inv",
-        "count": 2
+        "count": 4
       },
       {
         "nama": "heal",
@@ -13206,6 +13342,46 @@
       {
         "nama": "afk",
         "count": 4
+      },
+      {
+        "nama": "bot",
+        "count": 2
+      },
+      {
+        "nama": "pi",
+        "count": 1
+      },
+      {
+        "nama": "liriklagu",
+        "count": 1
+      },
+      {
+        "nama": "lirik",
+        "count": 7
+      },
+      {
+        "nama": "cum",
+        "count": 1
+      },
+      {
+        "nama": "asupan",
+        "count": 1
+      },
+      {
+        "nama": "ayu",
+        "count": 1
+      },
+      {
+        "nama": "bocil",
+        "count": 1
+      },
+      {
+        "nama": "chika",
+        "count": 1
+      },
+      {
+        "nama": "pet",
+        "count": 1
       }
     ]
   },
@@ -13315,7 +13491,7 @@
       },
       {
         "nama": "afk",
-        "count": 93
+        "count": 97
       },
       {
         "nama": "worldtalk",
@@ -13335,7 +13511,7 @@
       },
       {
         "nama": "simi",
-        "count": 26
+        "count": 27
       },
       {
         "nama": "pin",
@@ -13463,7 +13639,7 @@
       },
       {
         "nama": "me",
-        "count": 84
+        "count": 85
       },
       {
         "nama": "jual",
@@ -13523,7 +13699,7 @@
       },
       {
         "nama": "heal",
-        "count": 21
+        "count": 22
       },
       {
         "nama": "tebakkarakter",
@@ -13670,11 +13846,11 @@
     "db": [
       {
         "nama": "tekateki",
-        "count": 6
+        "count": 12
       },
       {
         "nama": "bantuan",
-        "count": 4
+        "count": 6
       },
       {
         "nama": "meow",
@@ -13690,7 +13866,7 @@
       },
       {
         "nama": "nyerah",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "#susunkata",
@@ -13742,11 +13918,11 @@
       },
       {
         "nama": "s",
-        "count": 7
+        "count": 10
       },
       {
         "nama": "sticker",
-        "count": 6
+        "count": 9
       },
       {
         "nama": "bot",
@@ -13798,7 +13974,7 @@
       },
       {
         "nama": "limit",
-        "count": 8
+        "count": 9
       },
       {
         "nama": "buylimit",
@@ -13810,7 +13986,7 @@
       },
       {
         "nama": "balance",
-        "count": 4
+        "count": 5
       },
       {
         "nama": "ceweasia",
@@ -13858,7 +14034,7 @@
       },
       {
         "nama": "bulanan",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "tebakgambar",
@@ -13874,6 +14050,14 @@
       },
       {
         "nama": "mingguan",
+        "count": 2
+      },
+      {
+        "nama": "buyglimit",
+        "count": 1
+      },
+      {
+        "nama": "buygamelimit",
         "count": 1
       }
     ]
@@ -13927,7 +14111,7 @@
       },
       {
         "nama": "limit",
-        "count": 8
+        "count": 9
       },
       {
         "nama": "mau",
@@ -14043,7 +14227,7 @@
       },
       {
         "nama": "bantuan",
-        "count": 2
+        "count": 5
       },
       {
         "nama": "nyerah",
@@ -14108,6 +14292,10 @@
       {
         "nama": "usus",
         "count": 1
+      },
+      {
+        "nama": "tekateki",
+        "count": 4
       }
     ]
   },
@@ -14474,7 +14662,7 @@
       },
       {
         "nama": "sticker",
-        "count": 17
+        "count": 18
       },
       {
         "nama": "#play",
@@ -14514,7 +14702,7 @@
       },
       {
         "nama": "bantuan",
-        "count": 21
+        "count": 26
       },
       {
         "nama": "bot",
@@ -14522,11 +14710,11 @@
       },
       {
         "nama": "tebakbendera",
-        "count": 64
+        "count": 73
       },
       {
         "nama": "nyerah",
-        "count": 24
+        "count": 26
       },
       {
         "nama": "ojek",
@@ -14562,7 +14750,7 @@
       },
       {
         "nama": "pin",
-        "count": 20
+        "count": 22
       },
       {
         "nama": "stickee",
@@ -14642,7 +14830,7 @@
       },
       {
         "nama": "s",
-        "count": 6
+        "count": 7
       },
       {
         "nama": "gampang",
@@ -14662,7 +14850,7 @@
       },
       {
         "nama": "mingguan",
-        "count": 3
+        "count": 4
       },
       {
         "nama": "masuk",
@@ -14678,7 +14866,7 @@
       },
       {
         "nama": "audio",
-        "count": 16
+        "count": 17
       },
       {
         "nama": "buyglimi",
@@ -14698,7 +14886,7 @@
       },
       {
         "nama": "susunkata",
-        "count": 6
+        "count": 8
       },
       {
         "nama": "dahlah",
@@ -14710,6 +14898,10 @@
       },
       {
         "nama": "dikocurang\n#dikogakadil",
+        "count": 1
+      },
+      {
+        "nama": "guessflag",
         "count": 1
       }
     ]
@@ -14736,6 +14928,10 @@
       {
         "nama": "my",
         "count": 1
+      },
+      {
+        "nama": "afk",
+        "count": 2
       }
     ]
   },
@@ -14908,7 +15104,7 @@
     "db": [
       {
         "nama": "hdr",
-        "count": 3
+        "count": 4
       },
       {
         "nama": "pin",
@@ -14994,7 +15190,7 @@
     "db": [
       {
         "nama": "pin",
-        "count": 91
+        "count": 113
       },
       {
         "nama": "tebak",
@@ -15014,7 +15210,7 @@
       },
       {
         "nama": "limit",
-        "count": 88
+        "count": 91
       },
       {
         "nama": "iyalah_",
@@ -15086,7 +15282,7 @@
       },
       {
         "nama": "afk",
-        "count": 65
+        "count": 69
       },
       {
         "nama": "bot",
@@ -15106,11 +15302,11 @@
       },
       {
         "nama": "s",
-        "count": 23
+        "count": 29
       },
       {
         "nama": "sticker",
-        "count": 22
+        "count": 28
       },
       {
         "nama": "jhonson",
@@ -15688,7 +15884,7 @@
     "db": [
       {
         "nama": "afk",
-        "count": 8
+        "count": 9
       },
       {
         "nama": "play",
@@ -16021,7 +16217,7 @@
       },
       {
         "nama": "susunkata",
-        "count": 11
+        "count": 12
       },
       {
         "nama": "nyerah",
@@ -16033,7 +16229,7 @@
       },
       {
         "nama": "limit",
-        "count": 9
+        "count": 10
       },
       {
         "nama": "delete",
@@ -16109,7 +16305,7 @@
       },
       {
         "nama": "menu",
-        "count": 1
+        "count": 2
       }
     ]
   },
@@ -16162,7 +16358,7 @@
       },
       {
         "nama": "audio",
-        "count": 14
+        "count": 17
       },
       {
         "nama": "galau",
@@ -16178,11 +16374,11 @@
       },
       {
         "nama": "nyerah",
-        "count": 5
+        "count": 6
       },
       {
         "nama": "bantuan",
-        "count": 23
+        "count": 27
       },
       {
         "nama": "s",
@@ -16198,7 +16394,7 @@
       },
       {
         "nama": "susunkata",
-        "count": 33
+        "count": 42
       },
       {
         "nama": "petunjuk",
@@ -16210,19 +16406,19 @@
       },
       {
         "nama": "tebakbendera",
-        "count": 6
+        "count": 11
       },
       {
         "nama": "limit",
-        "count": 25
+        "count": 37
       },
       {
         "nama": "buyglimit",
-        "count": 18
+        "count": 20
       },
       {
         "nama": "buygamelimit",
-        "count": 9
+        "count": 11
       },
       {
         "nama": "ping",
@@ -16234,6 +16430,30 @@
       },
       {
         "nama": "antibot",
+        "count": 1
+      },
+      {
+        "nama": "limiy",
+        "count": 3
+      },
+      {
+        "nama": "daftar",
+        "count": 1
+      },
+      {
+        "nama": "mingguan",
+        "count": 1
+      },
+      {
+        "nama": "bulanan",
+        "count": 1
+      },
+      {
+        "nama": "qc",
+        "count": 5
+      },
+      {
+        "nama": "tiktok",
         "count": 1
       }
     ]
@@ -16532,11 +16752,11 @@
       },
       {
         "nama": "susunkata",
-        "count": 20
+        "count": 22
       },
       {
         "nama": "limit",
-        "count": 15
+        "count": 22
       },
       {
         "nama": "bantuan",
@@ -16556,15 +16776,15 @@
       },
       {
         "nama": "buylimit",
-        "count": 1
+        "count": 4
       },
       {
         "nama": "tebakgame",
-        "count": 3
+        "count": 5
       },
       {
         "nama": "audio",
-        "count": 3
+        "count": 5
       },
       {
         "nama": "aap",
@@ -16581,6 +16801,26 @@
       {
         "nama": "panda",
         "count": 1
+      },
+      {
+        "nama": "qc",
+        "count": 5
+      },
+      {
+        "nama": "buyglimit",
+        "count": 2
+      },
+      {
+        "nama": "buygamelimit",
+        "count": 1
+      },
+      {
+        "nama": "stormenu",
+        "count": 1
+      },
+      {
+        "nama": "menu",
+        "count": 2
       }
     ]
   },
@@ -16657,15 +16897,15 @@
       },
       {
         "nama": "susunkata",
-        "count": 14
+        "count": 18
       },
       {
         "nama": "limit",
-        "count": 11
+        "count": 17
       },
       {
         "nama": "nyerah",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "tebakgame",
@@ -16673,11 +16913,11 @@
       },
       {
         "nama": "buyglimit",
-        "count": 3
+        "count": 4
       },
       {
         "nama": "buygamelimit",
-        "count": 2
+        "count": 3
       },
       {
         "nama": "bantuan",
@@ -16690,6 +16930,22 @@
       {
         "nama": "mautidur",
         "count": 1
+      },
+      {
+        "nama": "liimit",
+        "count": 1
+      },
+      {
+        "nama": "audio",
+        "count": 2
+      },
+      {
+        "nama": "close",
+        "count": 4
+      },
+      {
+        "nama": "menu",
+        "count": 3
       }
     ]
   },
@@ -16698,7 +16954,7 @@
     "db": [
       {
         "nama": "susunkata",
-        "count": 20
+        "count": 21
       },
       {
         "nama": "tebakbendera",
@@ -16706,7 +16962,7 @@
       },
       {
         "nama": "limit",
-        "count": 7
+        "count": 12
       },
       {
         "nama": "batuan",
@@ -16714,7 +16970,7 @@
       },
       {
         "nama": "bantuan",
-        "count": 7
+        "count": 9
       },
       {
         "nama": "antitoxic",
@@ -16722,7 +16978,7 @@
       },
       {
         "nama": "nyerah",
-        "count": 1
+        "count": 2
       },
       {
         "nama": "buylimit",
@@ -16734,11 +16990,15 @@
       },
       {
         "nama": "buyglimit",
-        "count": 5
+        "count": 9
       },
       {
         "nama": "buygamelimit",
-        "count": 3
+        "count": 5
+      },
+      {
+        "nama": "",
+        "count": 1
       }
     ]
   },
@@ -16777,6 +17037,65 @@
       {
         "nama": "smeme",
         "count": 4
+      },
+      {
+        "nama": "pushkontak",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "jid": "60162724764@s.whatsapp.net",
+    "db": [
+      {
+        "nama": "limit",
+        "count": 19
+      },
+      {
+        "nama": "susunkata",
+        "count": 34
+      },
+      {
+        "nama": "bantuan",
+        "count": 7
+      },
+      {
+        "nama": "menyerah",
+        "count": 1
+      },
+      {
+        "nama": "nyerah",
+        "count": 2
+      },
+      {
+        "nama": "buylimit",
+        "count": 3
+      },
+      {
+        "nama": "buyglimit",
+        "count": 5
+      },
+      {
+        "nama": "buygamelimit",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "jid": "628895244602@s.whatsapp.net",
+    "db": [
+      {
+        "nama": "susunkata",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "jid": "6285719396883@s.whatsapp.net",
+    "db": [
+      {
+        "nama": "keluar",
+        "count": 1
       }
     ]
   }
